@@ -137,3 +137,10 @@ class BinaryTree
     preorder(ptr->rightchild);
     cout << ptr->info << " ";
  }
+
+ bool isEmpty()
+ {
+    // checks if thr tree is empty
+    return ROOT == nullptr;
+ }
+};
