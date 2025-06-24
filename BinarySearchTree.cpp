@@ -7,4 +7,11 @@ public:
      Node *leftchild;
      Node *rightchild;
      
-    
+     //Constructor for the node clss
+     Node()
+     {
+    leftchild = nullptr; // initialize left child to null
+        rightchild = nullptr; // initialize right child to null
+     }
+};
+
