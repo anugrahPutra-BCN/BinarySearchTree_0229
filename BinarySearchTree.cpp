@@ -32,4 +32,29 @@ class BinaryTree
         cin >> x;
    
 
-       
+        // step 1: allocation memory forthe new node
+        Node *newNode = new Node();
+
+        // step 2: assign value to the data field of new node
+        newNode->info = x;
+
+        //step 3: make te left and right child of yhr new node pont to null
+        newNode->leftchild = nullptr;
+        newNode->rightchild = nullptr;
+
+        // step 4: locate th node which will be the parent of the node to be inserted
+        Node *parent = nullptr;
+        Node *currentNode = nullptr;
+        search(x, parent, currentNode);
+
+        // step 5: if parent is null (tree is empty)
+        if (parent == nullptr)
+        {
+            // 5a: mark thr new node as ROOT 
+            ROOT = newNode;
+
+            // 5b: exit
+            return;
+        }
+
+        
